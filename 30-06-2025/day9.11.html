@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+     <style>
+        .slider img{
+            display: none;
+            width: 300px;
+        }
+        .slider img:first-child{
+            display: block;
+        }
+     </style>
+</head>
+<body>
+    <div class="slider">
+    <img src="https://images.pexels.com/photos/32654993/pexels-photo-32654993.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=125&w=500" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXFR1pdFpNFgvOUNCTFIaP83gl8soCFxEf_A&s" alt="">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtCaQa-IvIXZP77DmtW8b3dMVuFNGQPrq93Q&s" alt="">
+    </div>
+    <button id="next">next</button>
+
+
+    <script>
+        let index=0
+        const images=$(".slider img")
+        console.log(images)
+        $("#next").click(function(){
+            images.eq(index).hide()
+            index= (index+1)%images.length
+            images.eq(index).show()
+        })
+    </script>
+</body>
+</html>

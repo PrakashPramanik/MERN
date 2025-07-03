@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Scroll to Top Button</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    #scrollTopBtn {
+      display: none;
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      z-index: 100;
+      font-size: 16px;
+      padding: 10px 15px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #scrollTopBtn:hover {
+      background-color: #555;
+    }
+
+ 
+    .content {
+      height: 2000px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Scroll Down to See the Button</h1>
+  <div class="content">
+    <p>This is long content to test scroll...</p>
+  </div>
+
+  <button id="scrollTopBtn">↑ Top</button>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+
+      $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+          $("#scrollTopBtn").fadeIn();
+        } else {
+          $("#scrollTopBtn").fadeOut();
+        }
+      });
+
+     
+      $("#scrollTopBtn").click(function () {
+        $("html, body").animate({ scrollTop: 0 }, 600);
+        return false;
+      });
+    });
+  </script>
+
+</body>
+</html>

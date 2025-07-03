@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background: #e8e1e1;
+            margin: 0;
+        }
+
+        .slider {
+            margin-top: 100px;
+            text-align: center;
+
+        }
+
+        .slider img {
+            display: none;
+           
+        }
+    
+    </style>
+</head>
+
+<body>
+    <div class="slider">
+        <img src="./img/1.png">
+        <img src="./img/2.png">
+        <img src="./img/3.png">
+        <img src="./img/4.png">
+        <img src="./img/5.png">
+        <img src="./img/6.png">
+        <img src="./img/7.png">
+        <img src="./img/8.png">
+      
+        
+    </div>
+
+ 
+    <script>
+        $(document).ready(function () {
+            let index = 0;
+            const images = $(".slider img");
+            images.hide();
+            images.eq(index).show();
+
+            setInterval(function () {
+                images.eq(index).hide();
+                index = (index + 1) % images.length;
+                images.eq(index).show();
+            }, 100);
+        });
+    </script>
+
+</body>
+
+</html>

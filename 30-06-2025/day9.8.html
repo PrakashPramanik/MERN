@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fade In/Out Boxes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    .box {
+      width: 200px;
+      height: 200px;
+      background-color: tomato;
+      margin: 20px auto;
+      display: none; 
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="fadeInBtn">Fade In</button>
+  <button id="fadeOutBtn">Fade Out</button>
+  <button id="fadeToggleBtn">Fade Toggle</button>
+
+  <div class="box" id="box"></div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#fadeInBtn").click(function () {
+        $("#box").fadeIn();
+      });
+
+      $("#fadeOutBtn").click(function () {
+        $("#box").fadeOut();
+      });
+
+      $("#fadeToggleBtn").click(function () {
+        $("#box").fadeToggle();
+      });
+    });
+  </script>
+
+</body>
+</html>

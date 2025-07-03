@@ -1,0 +1,25 @@
+body{
+    background-color: aliceblue;
+}
+
+
+#name {
+    padding: 10px;
+    
+}
+
+#myButton{
+    padding: 10px;
+    cursor: pointer;
+    margin-left: 20px;
+    
+}
+
+#myButton:hover{
+    background-color: blue;
+    color: white;
+}
+
+h1{
+    text-align: center;
+}

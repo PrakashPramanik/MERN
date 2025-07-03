@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Toggle Paragraph</title>
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 200px;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    #myPara {
+      display: none;
+      color: blue;
+      font-size: 18px;
+      margin-top: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <button id="toggleBtn">Toggle Paragraph</button>
+    <p id="myPara">This is a toggleable paragraph using jQuery.</p>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      $("#toggleBtn").click(function () {
+        $("#myPara").toggle();
+      });
+    });
+  </script>
+
+</body>
+</html>
